@@ -1,7 +1,13 @@
 create TABLE person(
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    surname VARCHAR(255)
+    username VARCHAR(255) UNIQUE,
+    password VARCHAR(255),
+    role VARCHAR(255) DEFAULT 'USER'
+)
+
+create TABLE role(
+    id SERIAL PRIMARY KEY,
+    value VARCHAR(255) UNIQUE
 )
 
 create TABLE post(
